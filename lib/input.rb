@@ -3,6 +3,7 @@ class Input
 
 include Hike
 include Bike
+include Ski
 
 
   def ask_user
