@@ -1,6 +1,10 @@
 
 class Input
 
+include Hike
+include Bike
+
+
   def ask_user
     @input = gets.chomp
     @input
@@ -9,9 +13,9 @@ class Input
   def first_input
     ask_user
     if @input == "biking" || @input == "bike" || @input == "Biking"
-      Bike.new.bike_list
+      bike_list
     elsif @input == "hiking"
-      Hike.new.list_hike
+      list_hike
     elsif @input == "skiing"
       list_ski
     elsif @input == "shopping"
@@ -19,7 +23,7 @@ class Input
     elsif @input == "eating"
       list_food
     else
-      Cli.new.not_rec
+      not_rec
     end
 
   end

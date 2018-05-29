@@ -1,4 +1,4 @@
-class Cli
+module Cli
 
   def start
     greeting

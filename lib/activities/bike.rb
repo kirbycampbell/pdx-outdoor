@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-class Bike
+module Bike
 
   def bike_list
   site = Nokogiri::HTML(open("https://fitt.co/portland/where-to-ride-best-bike-trails-portland/"))

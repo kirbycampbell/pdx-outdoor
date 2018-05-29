@@ -1,4 +1,4 @@
-class Hike
+module Hike
 
     def list_hike
       hike_array = []
