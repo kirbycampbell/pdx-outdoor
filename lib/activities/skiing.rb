@@ -1,12 +1,12 @@
 module Ski
-  @ski_array = []
+
     def list_ski
 
       site = Nokogiri::HTML(open("http://mountainvertical.com/best-skiing-washington-oregon-snowboard.php"))
 
       site.css("div.m").each_with_index do |resort, index|
         num = index + 1
-        @ski_array << resort
+
         puts "#{num}. #{resort.css("div.r").text}"
       end
       puts "Would you like more info on any of these?  If so, simply type it's number:"
