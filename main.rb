@@ -20,6 +20,7 @@ class Scrape
     puts " "
     puts "Please enter the activity you would like partake in:"
   end
+  
 
   def ask_user
     @input = gets.chomp
