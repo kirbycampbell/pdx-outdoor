@@ -11,7 +11,7 @@ class Input
     if @input == "biking" || @input == "bike" || @input == "Biking"
       Bike.new.bike_list
     elsif @input == "hiking"
-      list_hike
+      Hike.new.list_hike
     elsif @input == "skiing"
       list_ski
     elsif @input == "shopping"
@@ -19,8 +19,8 @@ class Input
     elsif @input == "eating"
       list_food
     else
-      Cli.not_rec
+      Cli.new.not_rec
     end
-    
+
   end
 end

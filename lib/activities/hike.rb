@@ -1,4 +1,4 @@
-module Hike
+class Hike
 
     def list_hike
       hike_array = []
@@ -15,10 +15,10 @@ module Hike
     def more_hike_info
       hike_input = gets.chomp
       if hike_input == "1"
-        puts "ok then google it bitch..."
-        greeting
+        puts "unfinished..."
+        Main.new
       else
-        greeting
+        Main.new
       end
     end
 
