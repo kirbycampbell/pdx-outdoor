@@ -20,6 +20,9 @@ include Cli
       list_hike
     elsif @input == "skiing"
       list_ski
+    elsif @input == "back"
+      activity?
+      Input.new.first_input
     else
       not_rec
       activity?

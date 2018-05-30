@@ -26,6 +26,7 @@ module Cli
   end
 
   def space
+    sleep 1
     puts " "
   end
 end

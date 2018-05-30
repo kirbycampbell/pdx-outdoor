@@ -25,9 +25,9 @@ def bike_info
     new_input -= 1
       space
       puts more_info[new_input]
-      sleep 2
+      puts "Type 'biking' to select trails again or 'back' when ready to return to the previous section"
       space
-      bike_list
+      Input.new.first_input
   end
   def space
     puts " "

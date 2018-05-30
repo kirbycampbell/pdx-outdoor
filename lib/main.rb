@@ -6,11 +6,7 @@ require_relative '../lib/cli.rb'
 require_relative '../lib/input.rb'
 
 class Main
-  attr_accessor :input
-  include Hike
-  include Bike
   include Cli
-  include Ski
 
   def initialize
     start
