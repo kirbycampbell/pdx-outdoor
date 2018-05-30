@@ -4,6 +4,7 @@ class Input
 include Hike
 include Bike
 include Ski
+include Cli
 
 
   def ask_user
@@ -19,12 +20,10 @@ include Ski
       list_hike
     elsif @input == "skiing"
       list_ski
-    elsif @input == "shopping"
-      list_shops
-    elsif @input == "eating"
-      list_food
     else
       not_rec
+      activity?
+      first_input
     end
 
   end

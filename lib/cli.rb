@@ -12,7 +12,7 @@ module Cli
   end
 
   def activity?
-    puts "Are you interested in biking, hiking, skiing, shopping, or eating?"
+    puts "Are you interested in biking, hiking, or skiing??"
     ask_for_activity
   end
 
@@ -22,7 +22,7 @@ module Cli
   end
 
   def not_rec
-    puts "That input didn't register, please enter the exact words 'biking, hiking, skiing, shopping, or eating'?"
+    puts "That input didn't register, please enter the exact words 'biking, hiking, or skiing'?"
   end
 
   def space
