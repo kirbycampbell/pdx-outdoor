@@ -13,13 +13,16 @@ module Hike
     end
 
     def more_hike_info
+      hike_array = []
       hike_input = gets.chomp
-      if hike_input == "1"
-        puts "unfinished..."
-        Main.new
-      else
-        Main.new
-      end
+        i = hike_input.to_i
+        site = Nokogiri::HTML(open("https://matadornetwork.com/life/13-of-the-most-mind-blowing-hikes-around-portland/"))
+        site.css("p").each do |description|
+          hike_array << description.text
+        end
+        puts hike_array[i]
+
+
     end
 
 end
