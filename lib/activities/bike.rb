@@ -3,34 +3,47 @@ require 'open-uri'
 
 module Bike
 
+  attr_accessor :inp
+
   def bike_list
-  site = Nokogiri::HTML(open("https://fitt.co/portland/where-to-ride-best-bike-trails-portland/"))
-  site.css(".list-loop__item").each_with_index do |trail, index|
-    num = index + 1
-    puts "#{num}. #{trail.css("h2").text}."
+    self.bike_site.css(".list-loop__item").each_with_index do |trail, index|
+      num = index + 1
+      puts "#{num}. #{trail.css("h2").text}."
+    end
+    bike_info
   end
-  bike_info
-end
 
 def bike_info
   more_info = []
-  site = Nokogiri::HTML(open("https://fitt.co/portland/where-to-ride-best-bike-trails-portland/"))
   space
     puts "Would you like more info on any of these Bike spots?  If so, simply type it's number:"
-      site.css(".list-loop__item").each do |description|
-        more_info << description.css("p").text
-      end
-    ainput = gets.chomp
-    new_input = ainput.to_i
-    new_input -= 1
-      space
-      puts more_info[new_input]
-      puts "Type 'biking' to select trails again or 'back' when ready to return to the previous section"
-      space
-      Input.new.first_input
+  self.bike_site.css(".list-loop__item").each do |description|
+    more_info << description.css("p").text
   end
+  space
+  get_input
+    puts more_info[@inp - 1]
+  bike_loop
+end
+
+  def bike_site
+    site = Nokogiri::HTML(open("https://fitt.co/portland/where-to-ride-best-bike-trails-portland/"))
+  end
+
+  def get_input
+    input = gets.chomp
+    @inp = input.to_i
+  end
+
+  def bike_loop
+    puts "Type 'biking' to select trails again or 'back' when ready to return to the previous section"
+    space
+    Input.new.first_input
+  end
+
   def space
     puts " "
   end
+
 
 end
