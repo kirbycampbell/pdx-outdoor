@@ -20,8 +20,14 @@ attr_accessor :hike_inp
         hike_array << description.text
       end
       hike_input
-      puts hike_array[hike_inp]
-      hike_loop
+      if @hike_inp >= 1 && @hike_inp <= hike_array.length
+        puts hike_array[hike_inp]
+        hike_loop
+      else
+        puts "That input was not valid..."
+        space
+        more_hike_info
+      end
     end
 
     def hike_site

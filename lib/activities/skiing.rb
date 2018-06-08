@@ -17,8 +17,14 @@ attr_accessor :ski_inp
         more_info << resort.text
       end
       ski_input
+      if @ski_input >= 1 && @ski_inp <= more_info.length
       puts more_info[@ski_inp - 1]
       ski_loop
+      else
+        puts "That input was not valid..."
+        space
+        more_ski_info
+      end
     end
 
     def ski_site
