@@ -1,8 +1,8 @@
-require_relative '../pdx-outdoor/lib/activities/bike.rb'
-require_relative '../pdx-outdoor//lib/activities/hike.rb'
-require_relative '../pdx-outdoor//lib/activities/skiing.rb'
-require_relative '../pdx-outdoor//lib/cli.rb'
-require_relative '../pdx-outdoor//lib/input.rb'
+require_relative '../pdx-outdoor-master/lib/activities/bike.rb'
+require_relative '../pdx-outdoor-master//lib/activities/hike.rb'
+require_relative '../pdx-outdoor-master//lib/activities/skiing.rb'
+require_relative '../pdx-outdoor-master//lib/cli.rb'
+require_relative '../pdx-outdoor-master//lib/input.rb'
 
 class Main
   include Cli
