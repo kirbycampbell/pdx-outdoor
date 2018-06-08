@@ -17,7 +17,7 @@ attr_accessor :ski_inp
         more_info << resort.text
       end
       ski_input
-      if @ski_input >= 1 && @ski_inp <= more_info.length
+      if @ski_inp >= 1 && @ski_inp <= more_info.length
       puts more_info[@ski_inp - 1]
       ski_loop
       else
