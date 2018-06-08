@@ -22,8 +22,13 @@ def bike_info
   end
   space
   get_input
+  inpp = @inp + 1
+  if @inp >= 1 && @inp <= more_info.length
     puts more_info[@inp - 1]
-  bike_loop
+    bike_loop
+  else
+    bike_info
+  end
 end
 
   def bike_site
