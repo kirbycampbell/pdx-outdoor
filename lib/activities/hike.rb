@@ -10,12 +10,12 @@ attr_accessor :hike_inp
         hike_array.shift
         puts "#{num}. #{path.text}"
       end
-      puts "Would you like more info on any of these?  If so, simply type it's number:"
       more_hike_info
     end
 
     def more_hike_info
       hike_array = []
+      puts "Would you like more info on any of these?  If so, simply type it's number:"
       self.hike_site.css("div.post-content").xpath("//p[1]").each do |description|
         hike_array << description.text
       end

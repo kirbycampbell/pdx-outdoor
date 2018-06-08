@@ -7,12 +7,12 @@ attr_accessor :ski_inp
         num = index + 1
         puts "#{num}. #{resort.css("div.r").text}"
       end
-      puts "Would you like to see elevation info any of these Ski spots?  If so, simply type it's number:"
       more_ski_info
     end
 
     def more_ski_info
       more_info = []
+      puts "Would you like to see elevation info any of these Ski spots?  If so, simply type it's number:"
       self.ski_site.css("div.v p.v").each do |resort|
         more_info << resort.text
       end
