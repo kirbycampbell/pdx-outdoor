@@ -1,6 +1,8 @@
-# A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rail
+git_source(:github) {|repo_name| "https://github.com/#{pdx-outdoor}" }
 
-gem "nokogiri", "~> 1.8"
+# Specify your gem's dependencies in pdx-outdoor.gemspec
+gemspec
+ruby
+gem 'pdx-outdoor'
